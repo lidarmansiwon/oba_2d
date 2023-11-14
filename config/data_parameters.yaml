@@ -1,0 +1,17 @@
+lidar_topic_name: "/navi/ray_cloud"
+imu_topic_name: "/nav/filtered_imu/data"
+slam_topic_name: "/Odometry"
+
+nav_info:
+
+        goals: 
+                - [4.5,-12]
+                - [0, 0]
+        goal_threshold: 2
+
+guid_info:
+
+        safety_width: 1                 #! 배의 폭을 고려한 안전 반경
+        MAX_detection_range: 6          #! 탐지 범위 MAX
+        MIN_detection_range: 0.25       #! 탐지 범위 MIN
+                

@@ -1,0 +1,20 @@
+<launch>
+    <!-- Load the parameters from a YAML file
+    <rosparam file="$(find pass)/config/pass_parameters.yaml" /> -->
+    <rosparam file="$(find oba_2d)/config/data_parameters.yaml" />
+
+    <!-- Start node -->
+
+    <node pkg="oba_2d" type="autonomous_ver2.py" name="autonomous_node" output="screen">
+    </node>
+
+    <node pkg="oba_2d" type="sNavigationNode.py" name="navigation_node" output="screen">
+    </node>
+
+    <node pkg="oba_2d" type="scan_tool" name="scan_tool" output="screen">
+    </node>
+
+    <node pkg="oba_2d" type="PD_control.py" name="PDcontrol_node" output="screen">
+    </node>    
+    
+</launch>
